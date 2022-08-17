@@ -8,26 +8,47 @@
     <style>
     .box{
         width: 100px;
-        height: 100px;
         background: paleturquoise;
         margin: 10px;
     }
+
     .container{
         background: palegoldenrod;
-	display: flex;
-	flex-direction: row-reverse;
-	flex-wrap: wrap;
-	justify-content: space-evenly;
-	align-items: flex-end;
+		height: 200px;
+		display: flex;
+		flex-direction: row-reverse;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: stretch; 
     }
-
+	.item{ 
+		line-height: 100px;
+		color: white;
+		font-weight: bold;
+		font-size: 2em;
+		text-align: center;
+	}
+	.item3{ 
+		order: 5;
+		flex-grow: 1;
+		align-self: flex-end; 
+	
+	}
+	.item7{ 
+		order: 2;
+		flex-grow: 2; 
+	} 
     </style>
 </head>
 <body>
     <div class = 'container'>
-        <div class = 'box'></div>
-        <div class = 'box'></div>
-        <div class = 'box'></div>
+        <div class = 'box item'>1</div>
+        <div class = 'box item'>2</div>
+        <div class = 'box item item3'>3</div>
+		<div class = 'box item'>4</div>
+        <div class = 'box item'>5</div>
+        <div class = 'box item'>6</div>
+		<div class = 'box item item7'>7</div>
     </div>
 </body>
 </html>
